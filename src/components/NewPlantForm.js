@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from "react";
+import React, { useState}from "react";
 
 function NewPlantForm({newPlant, setItemArr, plants}) {
 
@@ -44,10 +44,32 @@ function handleAddNewPlant(e) {
     <div className="new-plant-form">
       <h2>New Plant</h2>
       <form onSubmit= {handleAddNewPlant}>
-        <input type="text" name="name" placeholder="Plant name" value = {name} onChange={handleNameChange}/>
-        <input type="text" name="image" placeholder="Image URL" value = {image} onChange = {handleImageChange}/>
-        <input type="number" name="price" step="0.01" placeholder="Price" value ={price} onChange = {handlePriceChange}/>
-        <button type="submit" onClick ={handleAddNewPlant}>Add Plant</button>
+        <input 
+          type="text" 
+          name="name"   
+          placeholder="Plant name" 
+          value = {name} 
+          onChange={handleNameChange}/>
+          
+        <input 
+          type="text" 
+          name="image" 
+          placeholder="Image URL" 
+          value = {image} 
+          onChange = {handleImageChange}/>
+
+        <input 
+          type="number" 
+          name="price" 
+          step="0.01" 
+          placeholder="Price" 
+          value ={price} 
+          onChange = {handlePriceChange}/>
+
+        <button 
+          type="submit" 
+          onClick ={handleAddNewPlant}>Add Plant
+        </button>
       </form>
     </div>
   );
